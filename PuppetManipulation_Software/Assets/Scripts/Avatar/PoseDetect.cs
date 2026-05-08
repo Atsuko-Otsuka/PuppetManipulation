@@ -34,16 +34,39 @@ public class PoseDetect : MonoBehaviour
         Vector3 bone2Rot = bone2.localRotation.eulerAngles;
 
         // 腕を上げる
-        if (bone1Rot.x > 5 && bone1Rot.x < 30 && bone1Rot.y > 5 && bone1Rot.y < 30 && bone1Rot.z > 5 && bone1Rot.z < 30) // 指定範囲
+        // ボーンの指し示す方向
+        Vector3 armDir = -bone1.right;
+        // 何と比較するか
+        Vector3 targetDir = player.up;
+        // 内積計算
+        float dot = Vector3.Dot(armDir, targetDir);
+        //Debug.Log("Dot Product: " + dot);
+        // 矢印を可視化
+        // 青い線：ボーンが認識している「腕の向き」
+        //Debug.DrawRay(bone1.position, armDir * 1.0f, Color.blue);
+        // 赤い線：判定の基準にしている「目標の向き」
+        //Debug.DrawRay(bone1.position, targetDir * 1.0f, Color.red);
+        if (dot > 0.9f)
         {
-            text.text = "Pose Detected: Thunder";
-
             if (!isThunderActive)
             {
                 SpawnThunder();
                 isThunderActive = true;
             }
+
         }
+
+
+        //if (bone1Rot.x > 5 && bone1Rot.x < 30 && bone1Rot.y > 5 && bone1Rot.y < 30 && bone1Rot.z > 5 && bone1Rot.z < 30) // 指定範囲
+        //{
+        //    text.text = "Pose Detected: Thunder";
+
+        //    if (!isThunderActive)
+        //    {
+        //        SpawnThunder();
+        //        isThunderActive = true;
+        //    }
+        //}
         else if (bone1Rot.x > 45 && bone1Rot.x < 70 && bone2Rot.x > 300 && bone2Rot.x < 330)
         {
             text.text = "Pose Detected: Power Up";
@@ -66,7 +89,7 @@ public class PoseDetect : MonoBehaviour
     {
         float radius = 3f;
         Quaternion rot = Quaternion.Euler(0, 0, 0);
-        Vector3 dir = rot * player.forward;
+        Vector3 dir = rot * player.up;
         Vector3 pos = player.position + dir * radius;
         Instantiate(thunderPrefab, pos, Quaternion.identity);
     }

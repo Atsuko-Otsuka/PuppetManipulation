@@ -22,7 +22,7 @@ public class ShowBoneState : MonoBehaviour
         Transform bone = animator.GetBoneTransform(targetBone);
 
         // ÉIÉCÉâÅ[äpÇ…ïœä∑
-        Vector3 boneRot = bone.localRotation.eulerAngles;
+        Vector3 boneRot = bone.rotation.eulerAngles;
         
         text.text = "BoneState:" + boneRot;
     }

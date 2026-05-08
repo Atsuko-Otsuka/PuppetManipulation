@@ -23,10 +23,10 @@ Adafruit_BNO055 bno_sensors[NUM_SENSORS];
 // 各センサーが正常に初期化されたかを記録する配列
 bool sensor_initialized[NUM_SENSORS];
 
-const char* ssid     = "STUDIO"; // SSID
-const char* password = "79772736ef699"; // Password
+const char* ssid     = "Buffalo-2G-F948"; // SSID
+const char* password = "63hvekg4iv6y8"; // Password
 static WiFiUDP wifiUdp;
-static const char *RemoteIpadr = "192.168.100.35"; // 送信先のIPアドレス
+static const char *RemoteIpadr = "192.168.11.23"; // 送信先のIPアドレス
 static const int RmoteUdpPort = 9000; // 送信先ポート
 static const int LocalPort = 9001; // 受信ポート
 //char WiFibuff[4];
