@@ -30,23 +30,43 @@ public class PoseDetect : MonoBehaviour
         Transform bone2 = animator.GetBoneTransform(targetBone2);
 
         // オイラー角に変換
-        Vector3 bone1Rot = bone1.localRotation.eulerAngles;
-        Vector3 bone2Rot = bone2.localRotation.eulerAngles;
+        //Vector3 bone1Rot = bone1.localRotation.eulerAngles;
+        //Vector3 bone2Rot = bone2.localRotation.eulerAngles;
+
+        // ボーンの指し示す方向
+        Vector3 rightArmDir = -bone1.right;
+        // 比較対象
+        Vector3 targetDir1 = player.up;
+        // 内積計算
+        float dot1 = Vector3.Dot(rightArmDir, targetDir1);
+        Debug.Log("Dot Product: " + dot1);
+        //矢印を可視化
+        ////青い線：ボーンが認識している「腕の向き」
+        //Debug.DrawRay(bone1.position, rightArmDir * 1.0f, Color.blue);
+        ////赤い線：判定の基準にしている「目標の向き」
+        //Debug.DrawRay(bone1.position, targetDir1 * 1.0f, Color.red);
+
+        // ボーンの指し示す方向
+        Vector3 rightArmDir2 = -bone1.up;
+        Vector3 leftArmDir = -bone2.up;
+        // 比較対象
+        Vector3 targetDir2 = player.right;
+        // 内積計算
+        float dot2 = Vector3.Dot(rightArmDir2, targetDir2);
+        float dot3 = Vector3.Dot(leftArmDir, targetDir2);
+        Debug.Log("Dot Product: " + dot2 + ", " + dot3);
+        //矢印を可視化
+        //青い線：ボーンが認識している「腕の向き」
+        Debug.DrawRay(bone1.position, rightArmDir2 * 1.0f, Color.blue);
+        //赤い線：判定の基準にしている「目標の向き」
+        Debug.DrawRay(bone1.position, targetDir2 * 1.0f, Color.red);
+        //青い線：ボーンが認識している「腕の向き」
+        Debug.DrawRay(bone2.position, leftArmDir * 1.0f, Color.blue);
+        //赤い線：判定の基準にしている「目標の向き」
+        Debug.DrawRay(bone2.position, targetDir2 * 1.0f, Color.red);
 
         // 腕を上げる
-        // ボーンの指し示す方向
-        Vector3 armDir = -bone1.right;
-        // 何と比較するか
-        Vector3 targetDir = player.up;
-        // 内積計算
-        float dot = Vector3.Dot(armDir, targetDir);
-        //Debug.Log("Dot Product: " + dot);
-        // 矢印を可視化
-        // 青い線：ボーンが認識している「腕の向き」
-        //Debug.DrawRay(bone1.position, armDir * 1.0f, Color.blue);
-        // 赤い線：判定の基準にしている「目標の向き」
-        //Debug.DrawRay(bone1.position, targetDir * 1.0f, Color.red);
-        if (dot > 0.9f)
+        if (dot1 > 0.9f)
         {
             if (!isThunderActive)
             {
@@ -54,6 +74,14 @@ public class PoseDetect : MonoBehaviour
                 isThunderActive = true;
             }
 
+        }
+        else if (dot2 < -0.9f && dot3 < -0.9f)
+        {
+            if (!isPowerActive)
+            {
+                SpawnPowerUp();
+                isPowerActive = true;
+            }
         }
 
 
@@ -67,16 +95,16 @@ public class PoseDetect : MonoBehaviour
         //        isThunderActive = true;
         //    }
         //}
-        else if (bone1Rot.x > 45 && bone1Rot.x < 70 && bone2Rot.x > 300 && bone2Rot.x < 330)
-        {
-            text.text = "Pose Detected: Power Up";
+        //else if (bone1Rot.x > 45 && bone1Rot.x < 70 && bone2Rot.x > 300 && bone2Rot.x < 330)
+        //{
+        //    text.text = "Pose Detected: Power Up";
 
-            if (!isPowerActive)
-            {
-                SpawnPowerUp();
-                isPowerActive = true;
-            }
-        }
+        //    if (!isPowerActive)
+        //    {
+        //        SpawnPowerUp();
+        //        isPowerActive = true;
+        //    }
+        //}
         else
         {
             text.text = "Pose Not Detected";
