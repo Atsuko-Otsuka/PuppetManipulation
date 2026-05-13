@@ -1227,6 +1227,39 @@ Transform:
   - {fileID: 132056887}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &318242345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1734628643894718297, guid: 519a2fca4ac2fb24a806df578c45cee2, type: 3}
+  m_PrefabInstance: {fileID: 772212442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &318242347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318242345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e81addc86ed5fc49a0c4f82beefac9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  udpHandler: {fileID: 1035372568}
+  targetObject: {fileID: 318242345}
+  maxYaw: 180
+  minYaw: -180
+  maxPitch: 180
+  minPitch: -180
+  maxRoll: 180
+  minRoll: -180
+  targetPort: 3
+  quatX: -2
+  quatY: -1
+  quatZ: -3
+  calibrationKey: 114
+  offsetEuler: {x: 0, y: 0, z: 0}
+  thresholdAngle: 360
+  smoothingFactor: 10
 --- !u!1001 &409129427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2204,6 +2237,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serialHandler: {fileID: 1286924298}
   currentAccel: {x: 0, y: 0, z: 0}
+--- !u!1 &722729271 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7150721237157574458, guid: 519a2fca4ac2fb24a806df578c45cee2, type: 3}
+  m_PrefabInstance: {fileID: 772212442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &722729273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722729271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e81addc86ed5fc49a0c4f82beefac9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  udpHandler: {fileID: 1035372568}
+  targetObject: {fileID: 722729271}
+  maxYaw: 180
+  minYaw: -180
+  maxPitch: 180
+  minPitch: -180
+  maxRoll: 180
+  minRoll: -180
+  targetPort: 4
+  quatX: 2
+  quatY: 1
+  quatZ: -3
+  calibrationKey: 114
+  offsetEuler: {x: 0, y: 0, z: 0}
+  thresholdAngle: 360
+  smoothingFactor: 10
 --- !u!1 &726195058
 GameObject:
   m_ObjectHideFlags: 0
@@ -2380,7 +2446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7019067332505175533, guid: 519a2fca4ac2fb24a806df578c45cee2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7648075478950305623, guid: 519a2fca4ac2fb24a806df578c45cee2, type: 3}
       propertyPath: m_LocalScale.x
@@ -2441,8 +2507,59 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1734628643894718297, guid: 519a2fca4ac2fb24a806df578c45cee2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 318242347}
+    - targetCorrespondingSourceObject: {fileID: 880359248410749912, guid: 519a2fca4ac2fb24a806df578c45cee2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1452911175}
+    - targetCorrespondingSourceObject: {fileID: 7150721237157574458, guid: 519a2fca4ac2fb24a806df578c45cee2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 722729273}
+    - targetCorrespondingSourceObject: {fileID: 7309330491379114826, guid: 519a2fca4ac2fb24a806df578c45cee2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1589614113}
+    - targetCorrespondingSourceObject: {fileID: 5604285687602117799, guid: 519a2fca4ac2fb24a806df578c45cee2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 772212444}
+    - targetCorrespondingSourceObject: {fileID: 6191552189370168895, guid: 519a2fca4ac2fb24a806df578c45cee2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1937666304}
   m_SourcePrefab: {fileID: 100100000, guid: 519a2fca4ac2fb24a806df578c45cee2, type: 3}
+--- !u!1 &772212443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5604285687602117799, guid: 519a2fca4ac2fb24a806df578c45cee2, type: 3}
+  m_PrefabInstance: {fileID: 772212442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &772212444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772212443}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e81addc86ed5fc49a0c4f82beefac9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  udpHandler: {fileID: 1035372568}
+  targetObject: {fileID: 772212443}
+  maxYaw: 180
+  minYaw: -180
+  maxPitch: 180
+  minPitch: -180
+  maxRoll: 180
+  minRoll: -180
+  targetPort: 6
+  quatX: 2
+  quatY: -1
+  quatZ: 3
+  calibrationKey: 114
+  offsetEuler: {x: 0, y: 0, z: 0}
+  thresholdAngle: 360
+  smoothingFactor: 10
 --- !u!1 &782077016 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1557346377844141436, guid: 375902cf878b13d44a1e9a3c004a7a4a, type: 3}
@@ -3484,6 +3601,39 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
+--- !u!1 &1452911173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 880359248410749912, guid: 519a2fca4ac2fb24a806df578c45cee2, type: 3}
+  m_PrefabInstance: {fileID: 772212442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1452911175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452911173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e81addc86ed5fc49a0c4f82beefac9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  udpHandler: {fileID: 1035372568}
+  targetObject: {fileID: 1452911173}
+  maxYaw: 180
+  minYaw: -180
+  maxPitch: 180
+  minPitch: -180
+  maxRoll: 180
+  minRoll: -180
+  targetPort: 2
+  quatX: -2
+  quatY: -1
+  quatZ: -3
+  calibrationKey: 114
+  offsetEuler: {x: 0, y: 0, z: 0}
+  thresholdAngle: 360
+  smoothingFactor: 10
 --- !u!1001 &1502260543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4177,7 +4327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ec7a724b088cb784ab3abed96082bfd6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ec7a724b088cb784ab3abed96082bfd6, type: 3}
       propertyPath: m_TagString
@@ -4392,6 +4542,39 @@ MonoBehaviour:
   offsetEuler: {x: 0, y: 0, z: 0}
   thresholdAngle: 360
   smoothingFactor: 10
+--- !u!1 &1589614111 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7309330491379114826, guid: 519a2fca4ac2fb24a806df578c45cee2, type: 3}
+  m_PrefabInstance: {fileID: 772212442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1589614113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589614111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e81addc86ed5fc49a0c4f82beefac9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  udpHandler: {fileID: 1035372568}
+  targetObject: {fileID: 1589614111}
+  maxYaw: 180
+  minYaw: -180
+  maxPitch: 180
+  minPitch: -180
+  maxRoll: 180
+  minRoll: -180
+  targetPort: 6
+  quatX: 2
+  quatY: -1
+  quatZ: 3
+  calibrationKey: 114
+  offsetEuler: {x: 0, y: 0, z: 0}
+  thresholdAngle: 360
+  smoothingFactor: 10
 --- !u!1 &1689855063
 GameObject:
   m_ObjectHideFlags: 0
@@ -4526,6 +4709,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689855063}
   m_CullTransparentMesh: 1
+--- !u!1 &1937666302 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6191552189370168895, guid: 519a2fca4ac2fb24a806df578c45cee2, type: 3}
+  m_PrefabInstance: {fileID: 772212442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1937666304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937666302}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e81addc86ed5fc49a0c4f82beefac9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  udpHandler: {fileID: 1035372568}
+  targetObject: {fileID: 1937666302}
+  maxYaw: 180
+  minYaw: -180
+  maxPitch: 180
+  minPitch: -180
+  maxRoll: 180
+  minRoll: -180
+  targetPort: 7
+  quatX: 2
+  quatY: -1
+  quatZ: 3
+  calibrationKey: 114
+  offsetEuler: {x: 0, y: 0, z: 0}
+  thresholdAngle: 360
+  smoothingFactor: 10
 --- !u!1 &2043164647
 GameObject:
   m_ObjectHideFlags: 0
