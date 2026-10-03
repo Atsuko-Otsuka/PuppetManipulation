@@ -114,6 +114,7 @@ Meta Quest 3 HMD
 このリポジトリには、Unity側の操作スクリプトやシリアル/UDP関連の実装が含まれています。
 
 - Unity アプリケーション: `PuppetManipulation_Software/`
+- ハードウェア(基板、Arduino IDE、3Dプリンタデータなど): `PuppetManipulation_Hardware/`
 - センサ制御と通信: `Assets/` 配下のスクリプト群
 - キャラクター制御: `Assets/Scripts/Puppet/` など
 
@@ -136,18 +137,3 @@ Meta Quest 3 HMD
 4. ぬいぐるみにセンサユニットを取り付ける
 5. Unity 実行時に UDP 接続を確認する
 6. VR 空間でアバターが動くことを確認する
-
-## 今後の展望
-
-- より自然なアニメーションの補間
-- ぬいぐるみの感度調整を自動化
-- 複数アバターへの対応
-- 触覚や視線操作などの拡張
-
-## ライセンス
-
-このプロジェクトのライセンス情報については、[LICENSE](LICENSE) をご確認ください。
-
-## 貢献
-
-改善提案やバグ報告は、[Issues](https://github.com/Atsuko-Otsuka/PuppetManipulation/issues) でお願いします。
